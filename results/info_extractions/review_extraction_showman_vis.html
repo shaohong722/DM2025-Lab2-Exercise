@@ -1,0 +1,219 @@
+<style>
+.lx-highlight { position: relative; border-radius:3px; padding:1px 2px;}
+.lx-highlight .lx-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  max-width: 240px;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.lx-highlight:hover .lx-tooltip { visibility: visible; opacity:1; }
+.lx-animated-wrapper { max-width: 100%; font-family: Arial, sans-serif; }
+.lx-controls {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 8px;
+  padding: 12px; margin-bottom: 16px;
+}
+.lx-button-row {
+  display: flex; justify-content: center; gap: 8px; margin-bottom: 12px;
+}
+.lx-control-btn {
+  background: #4285f4; color: white; border: none; border-radius: 4px;
+  padding: 8px 16px; cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: background-color 0.2s;
+}
+.lx-control-btn:hover { background: #3367d6; }
+.lx-progress-container {
+  margin-bottom: 8px;
+}
+.lx-progress-slider {
+  width: 100%; margin: 0; appearance: none; height: 6px;
+  background: #ddd; border-radius: 3px; outline: none;
+}
+.lx-progress-slider::-webkit-slider-thumb {
+  appearance: none; width: 18px; height: 18px; background: #4285f4;
+  border-radius: 50%; cursor: pointer;
+}
+.lx-progress-slider::-moz-range-thumb {
+  width: 18px; height: 18px; background: #4285f4; border-radius: 50%;
+  cursor: pointer; border: none;
+}
+.lx-status-text {
+  text-align: center; font-size: 12px; color: #666; margin-top: 4px;
+}
+.lx-text-window {
+  font-family: monospace; white-space: pre-wrap; border: 1px solid #90caf9;
+  padding: 12px; max-height: 260px; overflow-y: auto; margin-bottom: 12px;
+  line-height: 1.6;
+}
+.lx-attributes-panel {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 6px;
+  padding: 8px 10px; margin-top: 8px; font-size: 13px;
+}
+.lx-current-highlight {
+  border-bottom: 4px solid #ff4444;
+  font-weight: bold;
+  animation: lx-pulse 1s ease-in-out;
+}
+@keyframes lx-pulse {
+  0% { text-decoration-color: #ff4444; }
+  50% { text-decoration-color: #ff0000; }
+  100% { text-decoration-color: #ff4444; }
+}
+.lx-legend {
+  font-size: 12px; margin-bottom: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid #e0e0e0;
+}
+.lx-label {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-right: 4px;
+  color: #000;
+}
+.lx-attr-key {
+  font-weight: 600;
+  color: #1565c0;
+  letter-spacing: 0.3px;
+}
+.lx-attr-value {
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.2px;
+}
+
+/* Add optimizations with larger fonts and better readability for GIFs */
+.lx-gif-optimized .lx-text-window { font-size: 16px; line-height: 1.8; }
+.lx-gif-optimized .lx-attributes-panel { font-size: 15px; }
+.lx-gif-optimized .lx-current-highlight { text-decoration-thickness: 4px; }
+</style>
+    <div class="lx-animated-wrapper lx-gif-optimized">
+      <div class="lx-attributes-panel">
+        <div class="lx-legend">Highlights Legend: <span class="lx-label" style="background-color:#D2E3FC;">audience_impact</span> <span class="lx-label" style="background-color:#C8E6C9;">opinion_statement</span></div>
+        <div id="attributesContainer"></div>
+      </div>
+      <div class="lx-text-window" id="textWindow">
+        **Page 1**
+&quot;&quot;&quot;
+“Without promotion, something terrible happens…nothing!” – attributed to Phineas Taylor 
+Barnum 
+
+“The Greatest Showman,” directed with verve and panache by Michael Gracey, is <span class="lx-highlight lx-current-highlight" data-idx="0" style="background-color:#C8E6C9;">an unabashed 
+piece of pure entertainment</span>, punctuated by <span class="lx-highlight" data-idx="1" style="background-color:#C8E6C9;">11 memorable songs</span> composed by Oscar- and Tony-
+winning duo Benj Pasek and Justin Paul, who composed the songs for “La La Land,” as well as 
+the current Broadway hit Dear Evan Hansen. The film is <span class="lx-highlight" data-idx="2" style="background-color:#C8E6C9;">made for the whole family to enjoy</span>, and 
+so it leaves out many of the darker elements (explored in the 1980 Broadway musical Barnum, 
+music by Cy Coleman). This is <span class="lx-highlight" data-idx="3" style="background-color:#C8E6C9;">a difficult tightrope to walk</span>, but credit is due to Gracey, <span class="lx-highlight" data-idx="4" style="background-color:#C8E6C9;">a 
+perfectly cast Hugh Jackman</span>, and the entire cast, who <span class="lx-highlight" data-idx="5" style="background-color:#C8E6C9;">play this story in the spirit in which it was 
+written</span> (by Jenny Bicks and Bill Condon). “The Greatest Showman” positions itself as <span class="lx-highlight" data-idx="6" style="background-color:#C8E6C9;">a story 
+celebrating diversity, and the importance of embracing all kinds</span>.  
+There are those who will see this as <span class="lx-highlight" data-idx="7" style="background-color:#C8E6C9;">a rose-colored-glasses view of what was a pretty exploitive 
+situation</span>. But in a 19th and early 20th century context, the circus and then vaudeville were 
+<span class="lx-highlight" data-idx="8" style="background-color:#C8E6C9;">welcoming places where those who had skills or who were rejected by society could find a home</span>. 
+<span class="lx-highlight" data-idx="9" style="background-color:#C8E6C9;">Barnum put “misfit toys” onstage</span>, saying, in essence, “Aren’t they amazing?” (all while filling 
+his pockets. For more thoughts on P.T. Barnum’s barely acknowledged influence on American 
+culture author Trav S.D.’s 2005 lecture at the Barnum Museum in Bridgeport, CT is a good place 
+to start.) Cary Grant, who had <span class="lx-highlight" data-idx="10" style="background-color:#C8E6C9;">a harsh poor childhood</span>, got his start as a tumbler in a vaudeville 
+troupe. Years later he described <span class="lx-highlight" data-idx="11" style="background-color:#C8E6C9;">his revelatory first visit</span> to the Bristol Hippodrome: 
+“The Saturday matinee was in full swing when I arrived backstage; and there I suddenly found 
+my inarticulate self in <span class="lx-highlight" data-idx="12" style="background-color:#C8E6C9;">a dazzling land of smiling, jostling people wearing and not wearing all 
+sorts of costumes and doing all sorts of clever things</span>. And that’s when I knew! What other life 
+could there be but that of an actor? They happily traveled and toured. They were <span class="lx-highlight" data-idx="13" style="background-color:#C8E6C9;">classless, 
+cheerful, and carefree</span>. <span class="lx-highlight" data-idx="14" style="background-color:#C8E6C9;">They gaily laughed, lived, and loved</span>.” 
+<span class="lx-highlight" data-idx="15" style="background-color:#D2E3FC;">That’s what “The Greatest Showman” captures.</span>
+&quot;&quot;&quot;
+
+
+      </div>
+      <div class="lx-controls">
+        <div class="lx-button-row">
+          <button class="lx-control-btn" onclick="playPause()">▶️ Play</button>
+          <button class="lx-control-btn" onclick="prevExtraction()">⏮ Previous</button>
+          <button class="lx-control-btn" onclick="nextExtraction()">⏭ Next</button>
+        </div>
+        <div class="lx-progress-container">
+          <input type="range" id="progressSlider" class="lx-progress-slider"
+                 min="0" max="15" value="0"
+                 onchange="jumpToExtraction(this.value)">
+        </div>
+        <div class="lx-status-text">
+          Entity <span id="entityInfo">1/16</span> |
+          Pos <span id="posInfo">[192-233]</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const extractions = [{"index": 0, "class": "opinion_statement", "text": "an unabashed piece of pure entertainment", "color": "#C8E6C9", "startPos": 192, "endPos": 233, "beforeText": "ng terrible happens\u2026nothing!\u201d \u2013 attributed to Phineas Taylor \nBarnum \n \n\u201cThe Greatest Showman,\u201d directed with verve and panache by Michael Gracey, is ", "extractionText": "an unabashed \npiece of pure entertainment", "afterText": ", punctuated by 11 memorable songs composed by Oscar- and Tony-\nwinning duo Benj Pasek and Justin Paul, who composed the songs for \u201cLa La Land,\u201d as we", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The Greatest Showman</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">unabashed piece of pure entertainment</span>}</div>"}, {"index": 1, "class": "opinion_statement", "text": "11 memorable songs", "color": "#C8E6C9", "startPos": 249, "endPos": 267, "beforeText": "lor \nBarnum \n \n\u201cThe Greatest Showman,\u201d directed with verve and panache by Michael Gracey, is an unabashed \npiece of pure entertainment, punctuated by ", "extractionText": "11 memorable songs", "afterText": " composed by Oscar- and Tony-\nwinning duo Benj Pasek and Justin Paul, who composed the songs for \u201cLa La Land,\u201d as well as \nthe current Broadway hit De", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The songs</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">memorable</span>}</div>"}, {"index": 2, "class": "opinion_statement", "text": "made for the whole family to enjoy", "color": "#C8E6C9", "startPos": 445, "endPos": 479, "beforeText": "-\nwinning duo Benj Pasek and Justin Paul, who composed the songs for \u201cLa La Land,\u201d as well as \nthe current Broadway hit Dear Evan Hansen. The film is ", "extractionText": "made for the whole family to enjoy", "afterText": ", and \nso it leaves out many of the darker elements (explored in the 1980 Broadway musical Barnum, \nmusic by Cy Coleman). This is a difficult tightrop", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">made for the whole family to enjoy</span>}</div>"}, {"index": 3, "class": "opinion_statement", "text": "a difficult tightrope to walk", "color": "#C8E6C9", "startPos": 609, "endPos": 638, "beforeText": "hole family to enjoy, and \nso it leaves out many of the darker elements (explored in the 1980 Broadway musical Barnum, \nmusic by Cy Coleman). This is ", "extractionText": "a difficult tightrope to walk", "afterText": ", but credit is due to Gracey, a \nperfectly cast Hugh Jackman, and the entire cast, who play this story in the spirit in which it was \nwritten (by Jen", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film&#x27;s approach</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">difficult tightrope to walk</span>}</div>"}, {"index": 4, "class": "opinion_statement", "text": "a perfectly cast Hugh Jackman", "color": "#C8E6C9", "startPos": 669, "endPos": 699, "beforeText": "er elements (explored in the 1980 Broadway musical Barnum, \nmusic by Cy Coleman). This is a difficult tightrope to walk, but credit is due to Gracey, ", "extractionText": "a \nperfectly cast Hugh Jackman", "afterText": ", and the entire cast, who play this story in the spirit in which it was \nwritten (by Jenny Bicks and Bill Condon). \u201cThe Greatest Showman\u201d positions i", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Hugh Jackman</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">perfectly cast</span>}</div>"}, {"index": 5, "class": "opinion_statement", "text": "play this story in the spirit in which it was written", "color": "#C8E6C9", "startPos": 726, "endPos": 780, "beforeText": ", \nmusic by Cy Coleman). This is a difficult tightrope to walk, but credit is due to Gracey, a \nperfectly cast Hugh Jackman, and the entire cast, who ", "extractionText": "play this story in the spirit in which it was \nwritten", "afterText": " (by Jenny Bicks and Bill Condon). \u201cThe Greatest Showman\u201d positions itself as a story \ncelebrating diversity, and the importance of embracing all kind", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The entire cast</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">play this story in the spirit in which it was written</span>}</div>"}, {"index": 6, "class": "opinion_statement", "text": "a story celebrating diversity, and the importance of embracing all kinds", "color": "#C8E6C9", "startPos": 858, "endPos": 931, "beforeText": " entire cast, who play this story in the spirit in which it was \nwritten (by Jenny Bicks and Bill Condon). \u201cThe Greatest Showman\u201d positions itself as ", "extractionText": "a story \ncelebrating diversity, and the importance of embracing all kinds", "afterText": ".  \nThere are those who will see this as a rose-colored-glasses view of what was a pretty exploitive \nsituation. But in a 19th and early 20th century ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The Greatest Showman</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">celebrating diversity, and the importance of embracing all kinds</span>}</div>"}, {"index": 7, "class": "opinion_statement", "text": "a rose-colored-glasses view of what was a pretty exploitive situation", "color": "#C8E6C9", "startPos": 972, "endPos": 1042, "beforeText": "eatest Showman\u201d positions itself as a story \ncelebrating diversity, and the importance of embracing all kinds.  \nThere are those who will see this as ", "extractionText": "a rose-colored-glasses view of what was a pretty exploitive \nsituation", "afterText": ". But in a 19th and early 20th century context, the circus and then vaudeville were \nwelcoming places where those who had skills or who were rejected ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The film&#x27;s portrayal of the circus</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">rose-colored-glasses view</span>}</div>"}, {"index": 8, "class": "opinion_statement", "text": "welcoming places where those who had skills or who were rejected by society could find a home", "color": "#C8E6C9", "startPos": 1127, "endPos": 1220, "beforeText": "e-colored-glasses view of what was a pretty exploitive \nsituation. But in a 19th and early 20th century context, the circus and then vaudeville were \n", "extractionText": "welcoming places where those who had skills or who were rejected by society could find a home", "afterText": ". \nBarnum put \u201cmisfit toys\u201d onstage, saying, in essence, \u201cAren\u2019t they amazing?\u201d (all while filling \nhis pockets. For more thoughts on P.T. Barnum\u2019s ba", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The circus and vaudeville</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">welcoming places</span>}</div>"}, {"index": 9, "class": "opinion_statement", "text": "Barnum put \u201cmisfit toys\u201d onstage", "color": "#C8E6C9", "startPos": 1223, "endPos": 1255, "beforeText": "century context, the circus and then vaudeville were \nwelcoming places where those who had skills or who were rejected by society could find a home. \n", "extractionText": "Barnum put \u201cmisfit toys\u201d onstage", "afterText": ", saying, in essence, \u201cAren\u2019t they amazing?\u201d (all while filling \nhis pockets. For more thoughts on P.T. Barnum\u2019s barely acknowledged influence on Amer", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Barnum</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">put &#x27;misfit toys&#x27; onstage</span>}</div>"}, {"index": 10, "class": "opinion_statement", "text": "a harsh poor childhood", "color": "#C8E6C9", "startPos": 1538, "endPos": 1560, "beforeText": "influence on American \nculture author Trav S.D.\u2019s 2005 lecture at the Barnum Museum in Bridgeport, CT is a good place \nto start.) Cary Grant, who had ", "extractionText": "a harsh poor childhood", "afterText": ", got his start as a tumbler in a vaudeville \ntroupe. Years later he described his revelatory first visit to the Bristol Hippodrome: \n\u201cThe Saturday ma", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Cary Grant&#x27;s childhood</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Negative</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">harsh poor childhood</span>}</div>"}, {"index": 11, "class": "opinion_statement", "text": "his revelatory first visit", "color": "#C8E6C9", "startPos": 1639, "endPos": 1665, "beforeText": " is a good place \nto start.) Cary Grant, who had a harsh poor childhood, got his start as a tumbler in a vaudeville \ntroupe. Years later he described ", "extractionText": "his revelatory first visit", "afterText": " to the Bristol Hippodrome: \n\u201cThe Saturday matinee was in full swing when I arrived backstage; and there I suddenly found \nmy inarticulate self in a d", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">Cary Grant&#x27;s first visit to the Bristol Hippodrome</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">revelatory</span>}</div>"}, {"index": 12, "class": "opinion_statement", "text": "a dazzling land of smiling, jostling people wearing and not wearing all sorts of costumes and doing all sorts of clever things", "color": "#C8E6C9", "startPos": 1812, "endPos": 1939, "beforeText": "sit to the Bristol Hippodrome: \n\u201cThe Saturday matinee was in full swing when I arrived backstage; and there I suddenly found \nmy inarticulate self in ", "extractionText": "a dazzling land of smiling, jostling people wearing and not wearing all \nsorts of costumes and doing all sorts of clever things", "afterText": ". And that\u2019s when I knew! What other life \ncould there be but that of an actor? They happily traveled and toured. They were classless, \ncheerful, and ", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">The Bristol Hippodrome</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">dazzling land</span>}</div>"}, {"index": 13, "class": "opinion_statement", "text": "classless, cheerful, and carefree", "color": "#C8E6C9", "startPos": 2063, "endPos": 2097, "beforeText": "all sorts of clever things. And that\u2019s when I knew! What other life \ncould there be but that of an actor? They happily traveled and toured. They were ", "extractionText": "classless, \ncheerful, and carefree", "afterText": ". They gaily laughed, lived, and loved.\u201d \nThat\u2019s what \u201cThe Greatest Showman\u201d captures.\n&quot;&quot;&quot;\n\n", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">actors</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">cheerful, and carefree</span>}</div>"}, {"index": 14, "class": "opinion_statement", "text": "They gaily laughed, lived, and loved", "color": "#C8E6C9", "startPos": 2099, "endPos": 2135, "beforeText": "\u2019s when I knew! What other life \ncould there be but that of an actor? They happily traveled and toured. They were classless, \ncheerful, and carefree. ", "extractionText": "They gaily laughed, lived, and loved", "afterText": ".\u201d \nThat\u2019s what \u201cThe Greatest Showman\u201d captures.\n&quot;&quot;&quot;\n\n", "attributesHtml": "<div><strong>class:</strong> opinion_statement</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">subject</span>: <span class=\"lx-attr-value\">actors</span>, <span class=\"lx-attr-key\">sentiment</span>: <span class=\"lx-attr-value\">Positive</span>, <span class=\"lx-attr-key\">key_phrase</span>: <span class=\"lx-attr-value\">gaily laughed, lived, and loved</span>}</div>"}, {"index": 15, "class": "audience_impact", "text": "That\u2019s what \u201cThe Greatest Showman\u201d captures.", "color": "#D2E3FC", "startPos": 2139, "endPos": 2183, "beforeText": "here be but that of an actor? They happily traveled and toured. They were classless, \ncheerful, and carefree. They gaily laughed, lived, and loved.\u201d \n", "extractionText": "That\u2019s what \u201cThe Greatest Showman\u201d captures.", "afterText": "\n&quot;&quot;&quot;\n\n", "attributesHtml": "<div><strong>class:</strong> audience_impact</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">emotion_evoked</span>: <span class=\"lx-attr-value\">nostalgia, warmth</span>, <span class=\"lx-attr-key\">causal_element</span>: <span class=\"lx-attr-value\">The portrayal of actors&#x27; lives</span>, <span class=\"lx-attr-key\">target_audience</span>: <span class=\"lx-attr-value\">the audience</span>}</div>"}];
+        let currentIndex = 0;
+        let isPlaying = false;
+        let animationInterval = null;
+        let animationSpeed = 1.0;
+
+        function updateDisplay() {
+          const extraction = extractions[currentIndex];
+          if (!extraction) return;
+
+          document.getElementById('attributesContainer').innerHTML = extraction.attributesHtml;
+          document.getElementById('entityInfo').textContent = (currentIndex + 1) + '/' + extractions.length;
+          document.getElementById('posInfo').textContent = '[' + extraction.startPos + '-' + extraction.endPos + ']';
+          document.getElementById('progressSlider').value = currentIndex;
+
+          const playBtn = document.querySelector('.lx-control-btn');
+          if (playBtn) playBtn.textContent = isPlaying ? '⏸ Pause' : '▶️ Play';
+
+          const prevHighlight = document.querySelector('.lx-text-window .lx-current-highlight');
+          if (prevHighlight) prevHighlight.classList.remove('lx-current-highlight');
+          const currentSpan = document.querySelector('.lx-text-window span[data-idx="' + currentIndex + '"]');
+          if (currentSpan) {
+            currentSpan.classList.add('lx-current-highlight');
+            currentSpan.scrollIntoView({block: 'center', behavior: 'smooth'});
+          }
+        }
+
+        function nextExtraction() {
+          currentIndex = (currentIndex + 1) % extractions.length;
+          updateDisplay();
+        }
+
+        function prevExtraction() {
+          currentIndex = (currentIndex - 1 + extractions.length) % extractions.length;
+          updateDisplay();
+        }
+
+        function jumpToExtraction(index) {
+          currentIndex = parseInt(index);
+          updateDisplay();
+        }
+
+        function playPause() {
+          if (isPlaying) {
+            clearInterval(animationInterval);
+            isPlaying = false;
+          } else {
+            animationInterval = setInterval(nextExtraction, animationSpeed * 1000);
+            isPlaying = true;
+          }
+          updateDisplay();
+        }
+
+        window.playPause = playPause;
+        window.nextExtraction = nextExtraction;
+        window.prevExtraction = prevExtraction;
+        window.jumpToExtraction = jumpToExtraction;
+
+        updateDisplay();
+      })();
+    </script>
